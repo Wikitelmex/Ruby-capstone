@@ -33,6 +33,11 @@ You can run those tests locally if you follow the steps above from 1 to 3, and t
 - GitHub: [@githubhandle](https://github.com/shadabwahidullah)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/wahidullah-shadab-2712031a3)
 
+👤 **Alex Castillo**
+- GitHub: [Alex](https://github.com/Wikitelmex)
+- Twitter: [@Alex](https://twitter.com/Alejand84515448)
+- LinkedIn: [Alex Castillo](https://www.linkedin.com/in/alejandro-castillo-6849131a9/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
