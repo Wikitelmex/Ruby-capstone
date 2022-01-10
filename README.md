@@ -38,6 +38,11 @@ You can run those tests locally if you follow the steps above from 1 to 3, and t
 - Twitter: [@Alex](https://twitter.com/Alejand84515448)
 - LinkedIn: [Alex Castillo](https://www.linkedin.com/in/alejandro-castillo-6849131a9/)
 
+👤 **Ahmed Adel**
+
+* LinkedIn: [LinkedIn](https://www.linkedin.com/in/ahmed-adel56/)
+* GitHub: [@githubhandle](https://github.com/ahmedadel56)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
