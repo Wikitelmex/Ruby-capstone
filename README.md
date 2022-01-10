@@ -1,4 +1,4 @@
-# Ruby Capstone
+# Catalog of my things
 
 1 - On Github, on the main page of the Ruby-Capstone, click the Code button and copy "Clone with HTTPS" by clicking the copy icon.
 In your terminal, enter a git clone and past the link that you copied from the repository, and press the   Enter
