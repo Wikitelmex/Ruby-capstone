@@ -1,5 +1,13 @@
-require 'date'
-today_time = Time.now
-today_date = Date.new(today_time.year, today_time.month, today_time.day)
-x = Date.new(2019, 12, 29)
-p (today_date - x).to_i
+class X
+  attr_accessor :zed
+
+  def initialize(zed = nil)
+    @zed = zed
+  end
+end
+
+med = X.new(5)
+
+m = med.zed || 'not exists'
+
+p m
