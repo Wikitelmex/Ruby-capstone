@@ -1,5 +1,6 @@
 class Genre
   attr_accessor :name
+  attr_reader :items
 
   def initialize(name, id = Random.rand(1..999_999))
     @id = id
@@ -9,6 +10,6 @@ class Genre
 
   def add_item(item)
     @items.push(item)
-    item.genere = self
+    item.genre = self
   end
 end
