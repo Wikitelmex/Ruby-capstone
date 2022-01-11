@@ -13,7 +13,7 @@ class Book < Item
   end
 end
 
-# book_one = Book.new('Z3zo3', 'done', 'game', 'Ahmed', 'Muhmod', 'elteta', 11)
+# book_one = Book.new('Z3zo3', 'bad', 'game', 'Ahmed', 'Muhmod', 'elteta', 6)
 
 # p book_one.source
 

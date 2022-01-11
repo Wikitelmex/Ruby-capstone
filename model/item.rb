@@ -19,7 +19,7 @@ class Item
     @label = label
   end
 
-  # private
+  private
 
   def can_be_archived?
     @publish_date > 10
