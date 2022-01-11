@@ -1,8 +1,12 @@
+require_relative './controller/authoractions'
 class UiApp
-  def initialize(books, music_albums, games)
-    @games = RentalActions.new(games)
-    @music_albums = PersonActions.new(music_albums)
-    @books = BookActions.new(books)
+  def initialize(books, music_albums, games, authors)
+    @books = books
+    @music_albums = music_albums
+    @games = games
+    # implement actions
+
+    @authors = AuthorActions.new(authors)
   end
 
   def options
@@ -10,17 +14,18 @@ class UiApp
     puts '0 - Exit'
     puts '1 - List all books'
     puts '2 - List all labels (e.g. Gift, New)'
-    puts '3 - Add a book'
+    puts '13 - List all Authors'
+    puts '14 - Create Author'
     puts '0 or default to exit'
     gets.chomp.to_i
   end
 
   def do_action(option)
     case option
-    when 1
-      @books.read_all
-    when default
-      break
+    when 13
+      @authors.read_all
+    when 14
+      @authors.create
     end
   end
 end
