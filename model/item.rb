@@ -1,32 +1,22 @@
 class Item
-  attr_reader :id, :archived
+  attr_reader :genere, :author, :source, :label
 
-  def initialize(genre, author, source, label, publish_date)
-    @id = Random.rand(1..999_999)
+  def initialize(publish_date, id = Random.rand(1..999_999))
+    @id = id
     @archived = false
-    @genre = genre
-    @author = author
-    @source = source
-    @label = label
     @publish_date = publish_date
+  end
+
+  def can_be_archived?
+    @publish_date > 10
   end
 
   def move_to_archive
     @archived = true if can_be_archived? == true
   end
 
-  def add_label(label)
-    @label = label
-  end
-
-  private
-
-  def can_be_archived?
-    @publish_date > 10
+  def genere=(genere)
+    @genere = genere
+    genere.items.push(self) unless genere.items.include?(self)
   end
 end
-
-# item_1 = Item.new('game','Ahmed','Muhmod','elteta','2020')
-# item_1.set_label('label_1')
-
-# p item_1.label
