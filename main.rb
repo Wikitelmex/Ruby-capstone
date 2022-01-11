@@ -13,7 +13,7 @@ def main
 
     puts 'Welcome!'
     option = ui_app.options
-    break if option > 15 or option == 0
+    break if option > 15 or option.zero?
 
     ui_app.do_action(option)
   end
