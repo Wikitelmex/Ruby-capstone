@@ -3,8 +3,8 @@ class Author
   attr_accessor :first_name, :last_name
 
   def initialize(first_name, last_name, id = Random.rand(1..999_999))
-    @first_name = first_name
-    @last_name = last_name
+    @first_name = first_name.capitalize
+    @last_name = last_name.capitalize
     @id = id
     @items = []
   end

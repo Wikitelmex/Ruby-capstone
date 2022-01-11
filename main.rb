@@ -4,7 +4,8 @@ def main
   books = []
   music_albums = []
   games = []
-  ui_app = UiApp.new(books, music_albums, games)
+  authors = []
+  ui_app = UiApp.new(books, music_albums, games, authors)
 
   loop do
     system 'clear'
@@ -12,7 +13,7 @@ def main
 
     puts 'Welcome!'
     option = ui_app.options
-    break if option > 9
+    break if option > 15 or option == 0
 
     ui_app.do_action(option)
   end

@@ -1,4 +1,4 @@
-require './icontroller'
+require_relative './icontroller'
 require_relative '../view/authorview'
 
 class AuthorActions
@@ -10,9 +10,10 @@ class AuthorActions
 
   def read_all
     @authors.each { |author| AuthorView.list_authors(author.id, author.first_name, author.last_name) }
+    wait
   end
 
   def create
-    @authors << AuthorView.create
+    @authors << AuthorView.new_author
   end
 end

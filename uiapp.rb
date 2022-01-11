@@ -1,9 +1,11 @@
 require_relative './controller/authoractions'
 class UiApp
   def initialize(books, music_albums, games, authors)
-    @games = RentalActions.new(games)
-    @music_albums = PersonActions.new(music_albums)
-    @books = BookActions.new(books)
+    @books = books
+    @music_albums = music_albums
+    @games = games
+    # implement actions
+
     @authors = AuthorActions.new(authors)
   end
 
@@ -24,8 +26,6 @@ class UiApp
       @authors.read_all
     when 14
       @authors.create
-    when default
-      break
     end
   end
 end
