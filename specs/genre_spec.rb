@@ -16,10 +16,10 @@ describe Genre do
 
   context 'Adding an item to genre' do
     it 'add item' do
-        g = Genre.new('someGenre')
-        i = Item.new('12/12/2020')
-        g.add_item(i)
-        expect(i.genre).to eq g
+      g = Genre.new('someGenre')
+      i = Item.new('12/12/2020')
+      g.add_item(i)
+      expect(i.genre).to eq g
     end
   end
 end
