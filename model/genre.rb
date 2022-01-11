@@ -1,4 +1,4 @@
-class Genere
+class Genre
   attr_accessor :name
 
   def initialize(name, id = Random.rand(1..999_999))
