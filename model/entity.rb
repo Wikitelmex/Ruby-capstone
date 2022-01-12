@@ -1,8 +1,10 @@
 require 'json'
+require 'fileutils'
 
 class Entity
   def initialize(file_name)
-    @file_name = file_name
+    Dir.mkdir('./data') unless Dir.exist?('./data')
+    @file_name = "./data/#{file_name}"
   end
 
   def save(payload)

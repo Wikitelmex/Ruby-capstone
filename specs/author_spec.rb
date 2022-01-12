@@ -51,6 +51,7 @@ describe Author do
       authors = Author.to_array(myjson, Author)
       expect(authors[0].first_name).to eq('Alex')
       expect(authors[1].first_name).to eq('Ahmed')
+      expect(authors[2].first_name).to eq('Wahidulla')
     end
 
     it 'object from the generated array being of type Author class' do
