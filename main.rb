@@ -4,8 +4,9 @@ def main
   books = []
   music_albums = []
   games = []
+  genres = []
   authors = []
-  ui_app = UiApp.new(books, music_albums, games, authors)
+  ui_app = UiApp.new(books, music_albums, games, authors, genres)
 
   loop do
     system 'clear'
