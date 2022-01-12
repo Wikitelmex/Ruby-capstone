@@ -12,9 +12,3 @@ class Book < Item
     super or @cover_state == 'bad'
   end
 end
-
-book_one = Book.new('Z3zo3', 'bad', '2015-10-5', archived: true)
-
-# item_one = Item.new('game','Ahmed','Muhmod','elteta',50)
-
-p book_one.move_to_archive
