@@ -52,5 +52,18 @@ describe Author do
       expect(authors[0].first_name).to eq('Alex')
       expect(authors[1].first_name).to eq('Ahmed')
     end
+
+    it 'object from the generated array being of type Author class' do
+      file_fake = %{(
+          [
+            {"id":356433,"first_name":"Alex","last_name":"Castillo"},
+            {"id":889139,"first_name":"Ahmed","last_name":"Adel"},
+            {"id":566284,"first_name":"Wahidulla","last_name":"Shadab"}
+          ]
+        )}.gsub(/([() ])/, ' ').strip
+      myjson = JSON.parse(file_fake)
+      authors = Author.to_array(myjson, Author)
+      expect(authors[0]).to be_a Author
+    end
   end
 end
