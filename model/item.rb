@@ -6,7 +6,7 @@ class Item
   def initialize(publish_date, id = Random.rand(1..999_999), archived: false)
     @id = id
     @archived = archived
-    @publish_date = publish_date
+    @publish_date = Date.parse(publish_date)
     @author = nil
   end
 
@@ -33,11 +33,7 @@ class Item
 
   def can_be_archived?
     today_time = Time.now
-    today_date = today_time.year
-    (today_date - @publish_date) > 10
+    today_date = Date.new(today_time.year, today_time.month, today_time.day)
+    (today_date - @publish_date) > (365.25 * 10).to_i
   end
 end
-
-item_one = Item.new(2014)
-
-p item_one.can_be_archived?
