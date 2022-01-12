@@ -1,13 +1,13 @@
-class X
-  attr_accessor :zed
+require_relative './entity'
 
-  def initialize(zed = nil)
-    @zed = zed
-  end
-end
+# # Entity.match_pattern?
 
-med = X.new(5)
-
-m = med.zed || 'not exists'
-
-p m
+# class ClassName
+#   def initialize(fname, lname, activated = true)
+#     p activated
+#     p "mi nombre es #{fname} #{lname}"
+#   end
+# end
+# jobj = { id: 123, name: 'alex', activated: true }
+# my_arr = jobj.values
+# x = ClassName.new(*my_arr)

@@ -1,5 +1,6 @@
 require 'json'
 require 'fileutils'
+require 'pry'
 
 class Entity
   def initialize(file_name)
@@ -13,6 +14,12 @@ class Entity
 
   def load(*args)
     jsonf = File.readable?(@file_name) ? JSON.parse(File.read(@file_name)) : nil
-    jsonf ? args[0].to_array(jsonf, *args) : []
+
+    return [] unless jsonf
+
+    jsonf.map do |obj|
+      myclass = args.detect { |clss| clss.constructor_pattern == obj.keys }
+      myclass.new(*obj.values)
+    end
   end
 end
