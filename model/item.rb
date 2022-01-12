@@ -24,9 +24,8 @@ class Item
     author.add_item(self)
   end
 
-  def label=(label)
+  def add_label(label)
     @label = label
-    label.add_item(self)
   end
 
   private
