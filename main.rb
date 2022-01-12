@@ -1,10 +1,14 @@
 require './uiapp'
+require './model/entity'
+require './model/author'
 
 def main
   books = []
   music_albums = []
   games = []
-  authors = []
+
+  authors_entity = Entity.new('authors.json')
+  authors = authors_entity.load(Author)
   ui_app = UiApp.new(books, music_albums, games, authors)
 
   loop do
@@ -17,6 +21,8 @@ def main
 
     ui_app.do_action(option)
   end
+
+  authors_entity.save(authors)
 end
 
 main

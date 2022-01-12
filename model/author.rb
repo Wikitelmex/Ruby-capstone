@@ -17,6 +17,14 @@ class Author
     }
   end
 
+  def self.to_array(myjson, *args)
+    return unless myjson
+
+    myjson.map do |obj|
+      args[0].new(obj['first_name'], obj['last_name'], obj['id'])
+    end
+  end
+
   def add_item(item)
     @items << item unless @items.include?(item)
   end
