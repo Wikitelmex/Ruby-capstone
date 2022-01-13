@@ -16,7 +16,7 @@ class Genre
   def to_json(_options = {})
     {
       name: @name,
-      id: @id, 
+      id: @id,
       items: @items
     }
   end
