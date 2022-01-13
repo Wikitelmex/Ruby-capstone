@@ -1,6 +1,7 @@
 require './uiapp'
 require './model/entity'
 require './model/author'
+require './model/label'
 
 def main
   books = []
@@ -10,9 +11,13 @@ def main
   genres_entity = Entity.new('genres.json')
   genres = genres_entity.load(Genre)
 
+  labels_entity = Entity.new('labels.json')
+  labels = labels_entity.load(Label)
+
   authors_entity = Entity.new('authors.json')
   authors = authors_entity.load(Author)
-  ui_app = UiApp.new(books, music_albums, games, authors, genres)
+  ui_app = UiApp.new(books, music_albums, games, authors, genres, labels)
+
 
   loop do
     system 'clear'
@@ -24,6 +29,7 @@ def main
 
     ui_app.do_action(option)
   end
+  labels_entity.save(labels)
   music_albums_entity.save(music_albums)
   genres_entity.save(genres)
   authors_entity.save(authors)

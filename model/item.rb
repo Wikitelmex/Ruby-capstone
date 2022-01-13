@@ -27,7 +27,7 @@ class Item
 
   def label=(label)
     @label = label
-    label.items << self unless label.items.include?(self)
+    label.add_item(self)
   end
 
   private
