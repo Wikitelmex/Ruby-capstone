@@ -22,4 +22,12 @@ describe Genre do
       expect(i.genre).to eq g
     end
   end
+
+  context 'Parse genre instance to JSON' do
+    it 'Change object to JSON' do
+      g = Genre.new('someGenre', 1232)
+      the_json = { name: 'someGenre', id: 1232, items: [] }
+      expect(g.to_json).to eq(the_json)
+    end
+  end
 end
