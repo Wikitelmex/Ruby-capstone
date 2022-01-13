@@ -1,5 +1,4 @@
 require_relative '../model/book'
-require_relative '../model/item'
 
 describe Book do
   before :each do
@@ -17,9 +16,7 @@ describe Book do
   it 'match cover state of the book' do
     expect(@book.cover_state).to match 'good'
   end
-  it 'match label of book' do
-    expect(@book.add_label('label1')).to match 'label1'
-  end
+
   it 'matche can_be_archived? if data is more than 10 years' do
     expect(@book.can_be_archived?).to match true
   end

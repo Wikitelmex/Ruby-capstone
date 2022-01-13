@@ -1,11 +1,12 @@
 require_relative '../model/label'
-
+require_relative '../model/item'
 describe Label do
   before :each do
     @label = Label.new('title', 'red')
+    @item = Item.new('2010/02/01')
   end
 
-  it 'match instance of student' do
+  it 'match instance of label' do
     expect(@label).to be_instance_of Label
   end
 
@@ -16,8 +17,8 @@ describe Label do
     expect(@label.color).to match 'red'
   end
   it 'match items array' do
-    @label.add_item('label1')
-    @label_one = @label.items[0]
-    expect(@label_one).to match 'label1'
+    @label.add_item(@item)
+    expect(@label.items.length).to eq 1
+    expect(@label.items).to include @item
   end
 end
