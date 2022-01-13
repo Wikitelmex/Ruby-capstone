@@ -1,4 +1,4 @@
-CREATE TABLE gener (
+CREATE TABLE genre (
   id INT PRIMARY KEY NOT NULL,
   name VARCHAR(100)
 );
@@ -17,14 +17,14 @@ CREATE TABLE label (
 
 CREATE TABLE item (
   id INT PRIMARY KEY NOT NULL,
-  gener_id INT,
+  genre_id INT,
   author_id INT,
   lable_id INT,
   publish_date DATE,
   archived BOOLEAN,
-  CONSTRAINT gener_id
-    FOREIGN KEY (gener_id)
-      REFERENCES gener(id),
+  CONSTRAINT genre_id
+    FOREIGN KEY (genre_id)
+      REFERENCES genre(id),
  CONSTRAINT author_id
     FOREIGN KEY (author_id)
       REFERENCES author(id),
