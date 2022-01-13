@@ -11,10 +11,14 @@ class Author
 
   def to_json(_options = {})
     {
-      id: @id,
       first_name: @first_name,
-      last_name: @last_name
+      last_name: @last_name,
+      id: @id
     }
+  end
+
+  def self.constructor_pattern
+    %w[first_name last_name id]
   end
 
   def add_item(item)
