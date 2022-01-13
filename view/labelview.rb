@@ -5,7 +5,7 @@ class LabelView
   end
 
   def self.new_label
-    p 'Create a new Author'
+    p 'Create a new Label'
     print 'Label title: '
     title = gets.chomp
     print 'Label color: '
