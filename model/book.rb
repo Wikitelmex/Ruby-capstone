@@ -8,6 +8,16 @@ class Book < Item
     @cover_state = cover_state
   end
 
+  def to_json(_options = {})
+    {
+      publisher: @publisher,
+      cover_state: @cover_state,
+      publish_date: @publish_date,
+      id: @id,
+      archived: @archived
+    }
+  end
+
   def can_be_archived?
     super or @cover_state == 'bad'
   end

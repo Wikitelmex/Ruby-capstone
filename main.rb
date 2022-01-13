@@ -2,9 +2,11 @@ require './uiapp'
 require './model/entity'
 require './model/author'
 require './model/label'
+require './model/book'
 def init
-  @books = []
   @games = []
+  @books_entity = Entity.new('books.json')
+  @books = @books_entity.load(Book)
   @music_albums_entity = Entity.new('music_albums.json')
   @music_albums = @music_albums_entity.load(MusicAlbum)
   @genres_entity = Entity.new('genres.json')
@@ -29,6 +31,7 @@ def main
 
     ui_app.do_action(option)
   end
+  @books_entity.save(@books)
   @labels_entity.save(@labels)
   @music_albums_entity.save(@music_albums)
   @genres_entity.save(@genres)
