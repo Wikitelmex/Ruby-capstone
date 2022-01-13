@@ -9,19 +9,8 @@ class Label
     @items = []
   end
 
-  def to_json(_options = {})
-    {
-      title: @title,
-      color: @color,
-      id: @id
-    }
-  end
-
-  def self.constructor_pattern
-    %w[title color id]
-  end
-
   def add_item(item)
-    @items << item unless @items.include?(item)
+    @items << item
+    # item.label = self
   end
 end
