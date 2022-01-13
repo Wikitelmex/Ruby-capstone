@@ -6,10 +6,10 @@ def main
   books = []
   music_albums = []
   games = []
-
+  genres = []
   authors_entity = Entity.new('authors.json')
   authors = authors_entity.load(Author)
-  ui_app = UiApp.new(books, music_albums, games, authors)
+  ui_app = UiApp.new(books, music_albums, games, authors, genres)
 
   loop do
     system 'clear'
