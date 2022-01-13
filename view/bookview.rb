@@ -2,8 +2,7 @@ require_relative '../model/book'
 
 class BookView
   def self.read_all(book)
-    puts "#{book.publisher} cover_state: #{book.cover_state}
-         publish_date: #{book.publish_date}"
+    puts "publisher #{book.publisher} cover_state: #{book.cover_state} publish_date: #{book.publish_date}"
   end
 
   def self.create
