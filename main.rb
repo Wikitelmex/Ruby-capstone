@@ -18,7 +18,6 @@ def main
   authors = authors_entity.load(Author)
   ui_app = UiApp.new(books, music_albums, games, authors, genres, labels)
 
-
   loop do
     system 'clear'
     system 'cls'
