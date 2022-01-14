@@ -44,3 +44,13 @@ CREATE TABLE book (
       REFERENCES item(id)
 );
 
+CREATE TABLE game (
+  id INT,
+  multiplayer VARCHAR(120),
+  last_played_at DATE,
+  PRIMARY KEY (id),
+  CONSTRAINT id
+    FOREIGN KEY (id)
+      REFERENCES item(id)
+);
+
