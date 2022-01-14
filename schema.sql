@@ -54,3 +54,10 @@ CREATE TABLE game (
       REFERENCES item(id)
 );
 
+CREATE TABLE music_album (
+  id INT,
+  on_spotify BOOLEAN,
+  CONSTRAINT id
+    FOREIGN KEY (id)
+      REFERENCES item(id)
+);
