@@ -6,7 +6,8 @@ class MusicAlbumView
   end
 
   def self.create
-    puts 'to create a music album enter a publish date'
+    mlabel = LabelView.new_label
+    puts 'enter a publish date [YYYY/MM/DD]'
     date = gets.chomp.to_s
     puts 'is it available in spotify? [Y/N]'
     response = gets.chomp.downcase
@@ -16,6 +17,6 @@ class MusicAlbumView
     when 'n'
       spotify = false
     end
-    MusicAlbum.new(date, spotify)
+    MusicAlbum.new(date, spotify).label= mlabel
   end
 end
