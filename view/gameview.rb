@@ -1,5 +1,4 @@
 require_relative '../model/game'
-require 'pry'
 
 class GameView
   def self.read_all(game)
