@@ -11,7 +11,7 @@ class UiApp
     @authors = AuthorActions.new(authors)
     @books = BookActions.new(books)
     @genres = GenreActions.new(genres)
-    @music_albums = MusicAblumActions.new(music_albums)
+    @music_albums = MusicAblumActions.new(music_albums, labels)
   end
 
   def options

@@ -2,8 +2,9 @@ require_relative '../view/music_albums_view'
 class MusicAblumActions
   include IController
 
-  def initialize(music_albums)
+  def initialize(music_albums, labels)
     @music_albums = music_albums
+    @labels = labels
   end
 
   def read_all
@@ -12,6 +13,6 @@ class MusicAblumActions
   end
 
   def create
-    @music_albums << MusicAlbumView.create
+    @music_albums << MusicAlbumView.create(@labels)
   end
 end

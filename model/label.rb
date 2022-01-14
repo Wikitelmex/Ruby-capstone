@@ -2,11 +2,11 @@ class Label
   attr_reader :id, :items
   attr_accessor :title, :color
 
-  def initialize(title, color, id = Random.rand(1..999_999))
+  def initialize(title, color, id = Random.rand(1..999_999), items = [])
     @id = id
     @title = title
     @color = color
-    @items = []
+    @items = items
   end
 
   def to_json(_options = {})
