@@ -3,11 +3,10 @@ require_relative './controller/labelactions'
 require_relative './controller/bookactions'
 require_relative './controller/genre_actions'
 require_relative './controller/music_album_actions'
+require_relative './controller/gameactions'
 class UiApp
   def initialize(books, music_albums, games, authors, genres, labels)
-    @games = games
-
-    # implement actions
+    @games = GameActions.new(games)
     @labels = LabelActions.new(labels)
     @authors = AuthorActions.new(authors)
     @books = BookActions.new(books)
@@ -28,6 +27,8 @@ class UiApp
     puts '8 - Create Music album'
     puts '9 - List all Authors'
     puts '10 - Create Author'
+    puts '11 - List all Games'
+    puts '12 - Create Game'
     puts '0 or default to exit'
     gets.chomp.to_i
   end
@@ -77,6 +78,10 @@ class UiApp
     end
   end
 
+  def game_related(option)
+    option == 11 ? @games.read_all : @games.create
+  end
+
   def do_action(option)
     case option
     when 1..2
@@ -89,6 +94,8 @@ class UiApp
       music_related(option)
     when 9..10
       author_related(option)
+    when 11..12
+      game_related(option)
     end
   end
 end
