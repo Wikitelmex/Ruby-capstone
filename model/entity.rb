@@ -1,6 +1,5 @@
 require 'json'
 require 'fileutils'
-require 'pry'
 
 class Entity
   def initialize(file_name)

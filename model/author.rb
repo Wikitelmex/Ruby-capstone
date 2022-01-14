@@ -23,5 +23,6 @@ class Author
 
   def add_item(item)
     @items << item unless @items.include?(item)
+    item.author = self
   end
 end
