@@ -17,6 +17,7 @@ class MusicAlbumView
     when 'n'
       spotify = false
     end
-    MusicAlbum.new(date, spotify).label= mlabel
+    m = MusicAlbum.new(date, spotify)
+    m.label = mlabel
   end
 end
