@@ -8,6 +8,8 @@ class GameActions
   end
 
   def read_all
+    puts '-------------------------------------------------------------'
+    puts '---------------------LIST OF GAMES---------------------------'
     @games.each { |game| GameView.read_all(game) }
     wait
   end

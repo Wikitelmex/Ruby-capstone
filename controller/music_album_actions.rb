@@ -7,6 +7,8 @@ class MusicAblumActions
   end
 
   def read_all
+    puts '-------------------------------------------------------------'
+    puts '---------------------LIST OF ALBUMS--------------------------'
     @music_albums.each { |music_album| MusicAlbumView.read_all(music_album) }
     wait
   end
