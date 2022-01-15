@@ -8,6 +8,8 @@ class BookActions
   end
 
   def read_all
+    puts '-------------------------------------------------------------'
+    puts '---------------------LIST OF BOOKS---------------------------'
     @book.each { |book| BookView.read_all(book) }
     wait
   end

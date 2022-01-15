@@ -9,6 +9,8 @@ class AuthorActions
   end
 
   def read_all
+    puts '-------------------------------------------------------------'
+    puts '---------------------LIST OF AUTHORS-------------------------'
     @authors.each { |author| AuthorView.list_authors(author.id, author.first_name, author.last_name) }
     wait
   end

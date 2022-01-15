@@ -9,6 +9,8 @@ class GenreActions
   end
 
   def read_all
+    puts '-------------------------------------------------------------'
+    puts '---------------------LIST OF GENRES--------------------------'
     @genres.each { |genre| GenreView.list_genres(genre) }
     wait
   end
