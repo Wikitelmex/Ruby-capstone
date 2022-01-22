@@ -1,5 +1,8 @@
 # Catalog of my things
 
+## Presentation video
+[video presenting the project](https://drive.google.com/file/d/1lDSNVOM81pC00m6r3PG1yorYhTagJ1go/view?usp=sharing)
+
 ## Built with
 - Ruby
 
